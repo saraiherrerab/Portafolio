@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer theme, base, components, utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer theme {
+  .font-outfit {
+    font-family: "Outfit", sans-serif;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .font-ovo {
+    font-family: "Ovo", serif;
+  }
+
+  .bg-light-hover {
+    background-color: #726975;
+  }
+
+  .bg-dark-hover {
+    background-color: #2a004a;
+  }
+
+  .bg-dark-theme {
+    background-color: #11001F;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+@layer utilities {
+  *{
+    font-family:Outfit;
+  }
+  .mx-6 {
+    margin-inline: calc(var(--spacing) * 6);
+  }
+  .bg-blue-500\/50 {
+    background-color: color-mix(in oklab, var(--color-blue-500) 50%, transparent);
+  }
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
 }
