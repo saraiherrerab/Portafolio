@@ -3,7 +3,7 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 import React from 'react'
 
 
-const About = () => {
+const About = (isDarkMode) => {
   return (
     <div id='about' className='w-full px-[12%] py-5 scroll-mt-20'>
       <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
@@ -25,18 +25,18 @@ const About = () => {
                     index)=>(
                     <li className='border-[0.5px] border-gray-400
                     rounded-xl p-6 cursor-pointer hover:bg-light-hover
-                    hover:-translate-y-1 duration-500 hover:shadow-black'
+                    hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white'
                     key={index}>
-                        <Image src={icon} alt={title} className='w-7
+                        <Image src={isDarkMode? iconDark : icon} alt={title} className='w-7
                         mt-3'/>
                         <h3 className='my-4 font-semibold
-                         text-gray-700'>{title}</h3>
-                        <p className='text-gray-600 text-sm'>{description}</p>
+                         text-gray-700 dark:text-white'>{title}</h3>
+                        <p className='text-gray-600 text-sm dark:text-white/80'>{description}</p>
 
                     </li>
                 )) }
             </ul>
-            <h4 className='my-6 text-gray-700 font-Ovo'>Tools I use</h4>
+            <h4 className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Tools I use</h4>
             <ul className='flex items-center gap-3 sm:gap-5'>
                 {toolsData.map((tool, index )=>(
                     <li className='flex items-center justify-center w-12 sm:w-14 aspect-square
