@@ -11,11 +11,11 @@ const Header = () => {
       initial={{y:-20, opacity:0}}
       whileInView={{y:0, opacity:1}}
       transition={{duration:0.8, delay:0.3}}>
-        <Image src={assets.profile_img} alt="" className="rounded-full w-40" />
+        <Image src={assets.foto_cv} alt="" className="rounded-full w-40 h-40 object-cover" />
       </motion.div>
         <motion.h3 initial={{scale:0}}
           whileInView={{scale:1}}
-          transition={{duration:0.8, type:'spring', stiffness:100}} className="flex items-end gap-2 text-xl md:text-2xl mb-3 -mt-10 font-Ovo">
+          transition={{duration:0.8, type:'spring', stiffness:100}} className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
 
         ¡Hola!, soy Saraí Herrera
         <Image src={assets.hand_icon} alt="" className="w-6" />
