@@ -1,4 +1,5 @@
 import user_image from './user-image.png';
+import foto_cv from './foto cv.png';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
@@ -38,6 +39,7 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 export const assets = {
     user_image,
+    foto_cv,
     code_icon,
     code_icon_dark,
     edu_icon,
@@ -107,9 +109,9 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Tecnologías', description: 'C, C++, JavaScript, Kotlin, MySQL, React, Next.js, HTML, CSS, Tailwind CSS, Python, WordPress, PHP, Figma, Dart, Flutter, Firebase, Vue.js, React Native, Expo', isHtml: false },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Educación', description: 'Ingeniera en Informática', isHtml: false },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Certificaciones', description: 'React Advanced (Meta 2026), React Basics (Meta 2025), Fundamentos de JavaScript (Platzi 2023), Frontend Developer teórico-práctico (Platzi 2023), Kotlin para Android (en proceso), JavaScript Práctico (Platzi 2023), IA generativa: más allá del chatbot (Google Cloud 2026)', isHtml: false }
 ];
 
 export const toolsData = [
