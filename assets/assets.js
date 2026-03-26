@@ -102,10 +102,30 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { 
+        icon: assets.web_icon, 
+        title: 'Web Development', 
+        description: 'Desarrollo de sitios web modernos, escalables y responsivos utilizando las últimas tecnologías como React, Next.js y Vue.js, optimizados para rendimiento y experiencia de usuario.', 
+        link: '' 
+    },
+    { 
+        icon: assets.mobile_icon, 
+        title: 'Mobile Apps', 
+        description: 'Creación de aplicaciones móviles nativas con Kotlin y multiplataforma con React Native, Flutter y Expo, enfocadas en ofrecer experiencias fluidas y de alto rendimiento.', 
+        link: '' 
+    },
+    { 
+        icon: assets.ui_icon, 
+        title: 'UI/UX Design', 
+        description: 'Diseño de interfaces intuitivas y centradas en el usuario mediante prototipado en Figma, garantizando experiencias visuales atractivas y funcionales que conectan con tu audiencia.', 
+        link: '' 
+    },
+    { 
+        icon: assets.graphics_icon, 
+        title: 'Mantenimiento y Optimización', 
+        description: 'Mejora continua de sistemas existentes, optimización de rendimiento, actualización de tecnologías y mantenimiento preventivo para garantizar la estabilidad y evolución de tus proyectos.', 
+        link: '' 
+    },
 ]
 
 export const infoList = [
