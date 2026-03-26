@@ -16,9 +16,9 @@ const Footer = ({isDarkMode}) => {
 
       <div className='text-center sm:flex items-center justify-between border-t
       border-gray-400 mx-[10%] mt-12 py-6'>
-        <p>© 2025 Saraí Herrera. Todos los derechos reservados.</p>
+        <p>© 2026 Saraí Herrera. Todos los derechos reservados.</p>
         <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-            <li><a target='_blank' href='https://github.com/saraiherrerab?tab=overview&from=2025-07-01&to=2025-07-09'>GitHub</a></li>
+            <li><a target='_blank' href='https://github.com/saraiherrerab?tab=overview&from=2026-07-01&to=2026-07-09'>GitHub</a></li>
             <li><a target='_blank' href='https://www.linkedin.com/in/sara%C3%AD-herrera-5413012b8/'>LinkedIn</a></li>
             <li><a target='_blank' href='https://www.instagram.com/saraiherrerab/'>Instagram</a></li>
             

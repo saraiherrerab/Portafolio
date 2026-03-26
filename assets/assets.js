@@ -82,24 +82,30 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'Ecosistema Digital Multi-Plataforma para Radiodifusión',
+        description: 'Aplicación Móvil & Web',
+        bgImage: '/radio1.jpeg',
+        images: ['/radio1.jpeg', '/radio2.jpeg'],
+        link: null
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'Plataforma de soporte con agente de IA para empresa OMD',
+        description: 'Aplicación Web',
+        bgImage: '/soporte1.png',
+        images: ['/soporte1.png', '/soporte2.png'],
+        link: null
     },
     {
         title: 'Photography site',
         description: 'Web Design',
         bgImage: '/work-3.png',
+        link: null
     },
     {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
         bgImage: '/work-4.png',
+        link: null
     },
 ]
 
@@ -133,7 +139,7 @@ export const serviceData = [
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Tecnologías', description: 'C, C++, JavaScript, Kotlin, MySQL, React, Next.js, HTML, CSS, Tailwind CSS, Python, WordPress, PHP, Figma, Dart, Flutter, Firebase, Vue.js, React Native, Expo', isHtml: false },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Educación', description: 'Ingeniera en Informática', isHtml: false },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Certificaciones', description: 'React Advanced (Meta 2026), React Basics (Meta 2025), Fundamentos de JavaScript (Platzi 2023), Frontend Developer teórico-práctico (Platzi 2023), Kotlin para Android (en proceso), JavaScript Práctico (Platzi 2023), IA generativa: más allá del chatbot (Google Cloud 2026)', isHtml: false }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Certificaciones', description: 'React Advanced (Meta 2026), React Basics (Meta 2026), Fundamentos de JavaScript (Platzi 2023), Frontend Developer teórico-práctico (Platzi 2023), Kotlin para Android (en proceso), JavaScript Práctico (Platzi 2023), IA generativa: más allá del chatbot (Google Cloud 2026)', isHtml: false }
 ];
 
 export const toolsData = [
