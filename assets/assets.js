@@ -85,46 +85,51 @@ export const workData = [
         title: 'Ecosistema Digital Multi-Plataforma para Radiodifusión',
         description: 'Aplicación Móvil & Web',
         bgImage: '/radio1.jpeg',
-        images: ['/radio1.jpeg', '/radio2.jpeg'],
-        link: null
+        images: ['/radio1.jpeg', '/radio2.jpeg', '/admin radio.jpeg', '/admin radio 2.jpeg', '/admin radio 3.jpeg'],
+        link: null,
+        fullDescription: 'Desarrollo completo de un ecosistema digital para radiodifusión que incluye aplicación móvil multiplataforma y panel de administración web. La aplicación permite a los usuarios escuchar radio en vivo, ver programación, recibir notificaciones y acceder a contenido exclusivo. El panel administrativo facilita la gestión de contenido, programación y análisis de audiencia en tiempo real.'
     },
     {
         title: 'Plataforma de soporte con agente de IA para empresa OMD',
         description: 'Aplicación Web',
         bgImage: '/soporte1.png',
         images: ['/soporte1.png', '/soporte2.png'],
-        link: null
+        link: null,
+        fullDescription: 'Plataforma web de soporte técnico integrada con inteligencia artificial para automatizar y optimizar la atención al cliente. El sistema utiliza un agente de IA para responder consultas frecuentes, clasificar tickets y proporcionar soluciones instantáneas, mejorando significativamente los tiempos de respuesta y la satisfacción del cliente.'
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-        link: null
+        title: 'Panel de Administración para empresa de Criptoactivos',
+        description: 'Frontend Web',
+        bgImage: '/ADMIN.png',
+        link: null,
+        fullDescription: 'Desarrollo del frontend de un panel de administración robusto y seguro para la gestión de criptoactivos. La interfaz permite monitorear transacciones, gestionar carteras digitales, visualizar análisis de mercado en tiempo real y administrar usuarios, todo con un diseño intuitivo y enfocado en la seguridad.'
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-        link: null
+        title: 'Sistema de Evaluación de Pensamiento Computacional mediante Juegos',
+        description: 'Aplicación Web Educativa',
+        bgImage: '/teg.png',
+        images: ['/teg.png', '/teg2.png', '/teg3.png'],
+        link: null,
+        fullDescription: 'Plataforma educativa interactiva que evalúa el pensamiento computacional de estudiantes a través de juegos didácticos. El sistema gamifica conceptos de programación y lógica, proporcionando retroalimentación inmediata y reportes detallados de progreso para educadores, haciendo el aprendizaje más atractivo y efectivo.'
     },
 ]
 
 export const serviceData = [
     { 
         icon: assets.web_icon, 
-        title: 'Web Development', 
+        title: 'Desarrollo Web', 
         description: 'Desarrollo de sitios web modernos, escalables y responsivos utilizando las últimas tecnologías como React, Next.js y Vue.js, optimizados para rendimiento y experiencia de usuario.', 
         link: '' 
     },
     { 
         icon: assets.mobile_icon, 
-        title: 'Mobile Apps', 
+        title: 'Aplicaciones Móviles', 
         description: 'Creación de aplicaciones móviles nativas con Kotlin y multiplataforma con React Native, Flutter y Expo, enfocadas en ofrecer experiencias fluidas y de alto rendimiento.', 
         link: '' 
     },
     { 
         icon: assets.ui_icon, 
-        title: 'UI/UX Design', 
+        title: 'Diseño UI/UX', 
         description: 'Diseño de interfaces intuitivas y centradas en el usuario mediante prototipado en Figma, garantizando experiencias visuales atractivas y funcionales que conectan con tu audiencia.', 
         link: '' 
     },
@@ -138,8 +143,17 @@ export const serviceData = [
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Tecnologías', description: 'C, C++, JavaScript, Kotlin, MySQL, React, Next.js, HTML, CSS, Tailwind CSS, Python, WordPress, PHP, Figma, Dart, Flutter, Firebase, Vue.js, React Native, Expo', isHtml: false },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Educación', description: 'Ingeniera en Informática', isHtml: false },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Certificaciones', description: 'React Advanced (Meta 2026), React Basics (Meta 2026), Fundamentos de JavaScript (Platzi 2023), Frontend Developer teórico-práctico (Platzi 2023), Kotlin para Android (en proceso), JavaScript Práctico (Platzi 2023), IA generativa: más allá del chatbot (Google Cloud 2026)', isHtml: false }
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Educación', description: 'Ingeniera en Informática', isHtml: false }
+];
+
+export const certifications = [
+    { name: 'React Advanced', org: 'Meta 2026', link: 'https://www.coursera.org/account/accomplishments/verify/AFAO58B9XXVO' },
+    { name: 'React Basics', org: 'Meta 2026', link: 'https://www.coursera.org/account/accomplishments/verify/ZBNWTT6Z8GV2' },
+    { name: 'Fundamentos de JavaScript', org: 'Platzi 2023', link: 'https://platzi.com/p/sarai2021/curso/2467-frontend-developer/diploma/detalle/' },
+    { name: 'Frontend Developer teórico-práctico', org: 'Platzi 2023', link: 'https://platzi.com/p/sarai2021/curso/2477-frontend-developer-practico/diploma/detalle/' },
+    { name: 'JavaScript Práctico', org: 'Platzi 2023', link: 'https://platzi.com/p/sarai2021/curso/3271-javascript-practico/diploma/detalle/' },
+    { name: 'IA generativa: más allá del chatbot', org: 'Google Cloud 2026', link: 'https://www.coursera.org/account/accomplishments/verify/84ZLBZTXAT88' },
+    { name: 'Kotlin para Android', org: 'en proceso', link: null }
 ];
 
 export const toolsData = [

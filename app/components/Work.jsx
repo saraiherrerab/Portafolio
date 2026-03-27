@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 
 const Work = ({isDarkMode}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState({});
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [modalImageIndex, setModalImageIndex] = useState(0);
 
   const handleNextImage = (projectIndex, totalImages) => {
     setCurrentImageIndex(prev => ({
@@ -17,6 +19,28 @@ const Work = ({isDarkMode}) => {
       ...prev,
       [projectIndex]: ((prev[projectIndex] || 0) - 1 + totalImages) % totalImages
     }));
+  };
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setModalImageIndex(0);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setModalImageIndex(0);
+  };
+
+  const nextModalImage = () => {
+    if (selectedProject?.images) {
+      setModalImageIndex((prev) => (prev + 1) % selectedProject.images.length);
+    }
+  };
+
+  const prevModalImage = () => {
+    if (selectedProject?.images) {
+      setModalImageIndex((prev) => (prev - 1 + selectedProject.images.length) % selectedProject.images.length);
+    }
   };
 
   return (
@@ -37,7 +61,10 @@ const Work = ({isDarkMode}) => {
 
           return (
             <div key={index} className='flex flex-col gap-3'>
-              <div className='aspect-square rounded-lg relative cursor-pointer group overflow-hidden'>
+              <div 
+                className='aspect-square rounded-lg relative cursor-pointer group overflow-hidden'
+                onClick={() => openModal(project)}
+              >
                 {/* Use Next.js Image component for the background image */}
                 <Image
                   src={displayImage}
@@ -111,11 +138,81 @@ const Work = ({isDarkMode}) => {
         })}
       </div>
 
-        <a href="" className='w-max flex items-center justify-center gap-2
-        text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 
-        mx-auto my-20 duration-500 dark:text-white dark:border-white '>
-            Ver más <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='Right arrow' className='w-4'/>
-        </a>
+      {/* Modal */}
+      {selectedProject && (
+        <div 
+          className='fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4'
+          onClick={closeModal}
+        >
+          <div 
+            className='bg-white dark:bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto'
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className='absolute top-4 right-4 bg-white dark:bg-gray-800 rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-10'
+            >
+              <svg className='w-6 h-6 text-gray-700 dark:text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
+              </svg>
+            </button>
+
+            {/* Image carousel */}
+            <div className='relative aspect-video bg-gray-100 dark:bg-gray-800'>
+              <Image
+                src={selectedProject.images ? selectedProject.images[modalImageIndex] : selectedProject.bgImage}
+                alt={selectedProject.title}
+                fill
+                className='object-contain'
+              />
+              
+              {/* Navigation arrows for modal */}
+              {selectedProject.images && selectedProject.images.length > 1 && (
+                <>
+                  <button
+                    onClick={prevModalImage}
+                    className='absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 transition-all'
+                  >
+                    <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={nextModalImage}
+                    className='absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 transition-all'
+                  >
+                    <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
+                    </svg>
+                  </button>
+                  
+                  {/* Image indicators */}
+                  <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2'>
+                    {selectedProject.images.map((_, imgIndex) => (
+                      <div
+                        key={imgIndex}
+                        className={`h-2 rounded-full transition-all ${
+                          imgIndex === modalImageIndex 
+                            ? 'bg-gray-700 w-6' 
+                            : 'bg-gray-400 w-2'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Content */}
+            <div className='p-6'>
+              <h2 className='text-2xl font-semibold mb-2 text-gray-900 dark:text-white'>{selectedProject.title}</h2>
+              <p className='text-sm text-gray-500 dark:text-gray-400 mb-4'>{selectedProject.description}</p>
+              <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>{selectedProject.fullDescription}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
