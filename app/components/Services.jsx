@@ -4,14 +4,14 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div id='services' className='w-full px-[12%] py-5 scroll-mt-20'>
+    <div id='services' className='w-full px-[5%] sm:px-[8%] lg:px-[12%] py-10 scroll-mt-20'>
         <h4 className='text-center mb-2 text-lg font-Ovo dark:text-white'>Lo que ofrezco</h4>
-        <h2 className='text-center text-5xl font-Ovo dark:text-white'>Mis Servicios</h2>
-        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo dark:text-white'>
+        <h2 className='text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo dark:text-white'>Mis Servicios</h2>
+        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo dark:text-white text-sm sm:text-base px-4'>
             Ofrezco una gama completa de servicios como Desarrolladora Full Stack,
             especializada en la creación de aplicaciones de principio a fin.
         </p>
-        <div className='grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-6 my-10'> {/* <-- ¡Aquí el cambio! */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-6 my-10'> {/* <-- ¡Aquí el cambio! */}
             {serviceData.map((service, index) => (
                 <div key={index} className='border border-gray-400 rounded-lg px-8 py-12
                 hover:shadow-black cursor-pointer hover:bg-light-hover

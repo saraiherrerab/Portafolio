@@ -44,14 +44,14 @@ const Work = ({isDarkMode}) => {
   };
 
   return (
-    <div id='work' className='w-full px-[12%] py-5 scroll-mt-20'>
+    <div id='work' className='w-full px-[5%] sm:px-[8%] lg:px-[12%] py-10 scroll-mt-20'>
       <h4 className='text-center mb-2 text-lg font-Ovo'>Mi portafolio</h4>
-      <h2 className='text-center text-5xl font-Ovo'>Mis últimos trabajos</h2>
-      <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+      <h2 className='text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo'>Mis últimos trabajos</h2>
+      <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-sm sm:text-base px-4'>
         Bienvenido a mi portafolio, explora mi colección de proyectos
       </p>
       {/* Added responsive grid with autofit here */}
-      <div className='grid grid-cols-[repeat(auto-fit,_minmax(280px,_1fr))] gap-6 my-10 dark:text-black'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,_minmax(280px,_1fr))] gap-6 my-10 dark:text-black'>
         {workData.map((project, index) => {
           const hasMultipleImages = project.images && project.images.length > 1;
           const currentIndex = currentImageIndex[index] || 0;
@@ -103,11 +103,11 @@ const Work = ({isDarkMode}) => {
                 )}
 
                 {/* Content overlaying the image */}
-                <div className='absolute inset-0 flex items-end justify-center z-10 p-4'>
-                  <div className='bg-white w-10/12 rounded-md py-3 px-5 flex items-center justify-between duration-500 group-hover:translate-y-[-0.5rem]'>
-                    <div>
-                      <h3 className='text-xl font-semibold'>{project.title}</h3>
-                      <p className='text-gray-600 text-sm'>{project.description}</p>
+                <div className='absolute inset-0 flex items-end justify-center z-10 p-2 sm:p-4'>
+                  <div className='bg-white w-11/12 sm:w-10/12 rounded-md py-2 sm:py-3 px-3 sm:px-5 flex items-center justify-between duration-500 group-hover:translate-y-[-0.5rem]'>
+                    <div className='flex-1 min-w-0'>
+                      <h3 className='text-sm sm:text-lg lg:text-xl font-semibold truncate'>{project.title}</h3>
+                      <p className='text-gray-600 text-xs sm:text-sm'>{project.description}</p>
                     </div>
                     {project.link && (
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
