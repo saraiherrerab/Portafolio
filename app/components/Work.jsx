@@ -110,8 +110,16 @@ const Work = ({isDarkMode}) => {
                       <p className='text-gray-600 text-xs sm:text-sm'>{project.description}</p>
                     </div>
                     {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <Image src={assets.send_icon} alt='Ver proyecto' width={24} height={24} className="ml-4"/>
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className='ml-2 text-gray-600 hover:text-black transition-colors flex-shrink-0'
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <svg className='w-4 h-4 sm:w-5 sm:h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2}>
+                          <path strokeLinecap='round' strokeLinejoin='round' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+                        </svg>
                       </a>
                     )}
                   </div>
@@ -208,7 +216,22 @@ const Work = ({isDarkMode}) => {
             <div className='p-6'>
               <h2 className='text-2xl font-semibold mb-2 text-gray-900 dark:text-white'>{selectedProject.title}</h2>
               <p className='text-sm text-gray-500 dark:text-gray-400 mb-4'>{selectedProject.description}</p>
-              <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>{selectedProject.fullDescription}</p>
+              <p className='text-gray-700 dark:text-gray-300 leading-relaxed mb-6'>{selectedProject.fullDescription}</p>
+              
+              {/* Link button in modal */}
+              {selectedProject.link && (
+                <a 
+                  href={selectedProject.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className='inline-flex items-center gap-2 px-6 py-3 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-black rounded-full transition-colors font-medium'
+                >
+                  Visitar sitio web
+                  <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24' strokeWidth={2}>
+                    <path strokeLinecap='round' strokeLinejoin='round' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+                  </svg>
+                </a>
+              )}
             </div>
           </div>
         </div>

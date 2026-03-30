@@ -112,6 +112,27 @@ export const workData = [
         link: null,
         fullDescription: 'Plataforma educativa interactiva que evalúa el pensamiento computacional de estudiantes a través de juegos didácticos. El sistema gamifica conceptos de programación y lógica, proporcionando retroalimentación inmediata y reportes detallados de progreso para educadores, haciendo el aprendizaje más atractivo y efectivo.'
     },
+    {
+        title: 'Sitio Web Corporativo Consumers Unlimited',
+        description: 'Desarrollo WordPress',
+        bgImage: '/consumers.png',
+        link: 'https://consumersunlimited.com',
+        fullDescription: 'Participación en el equipo de diseño y desarrollo del sitio web corporativo de Consumers Unlimited utilizando WordPress durante el año 2024. El proyecto incluyó la implementación de un diseño moderno y responsivo, optimización SEO, integración de funcionalidades personalizadas y aseguramiento de una experiencia de usuario fluida y profesional. El mantenimiento del sitio fue posteriormente cedido al cliente.'
+    },
+    {
+        title: 'Sitio Web Superior Case Management',
+        description: 'Desarrollo WordPress',
+        bgImage: '/SCM.png',
+        link: 'https://superiorcasemanagement.com/',
+        fullDescription: 'Participación en el equipo de diseño y desarrollo del sitio web de Superior Case Management utilizando WordPress durante el año 2024. El proyecto se enfocó en crear una presencia web profesional para servicios de gestión de casos, implementando un diseño limpio y accesible, optimización para motores de búsqueda y funcionalidades que facilitan la comunicación con los clientes. El mantenimiento del sitio fue posteriormente cedido al cliente.'
+    },
+    {
+        title: 'Mantenimiento Web Hardwear Style',
+        description: 'Mantenimiento WordPress',
+        bgImage: '/style.png',
+        link: 'https://hardwear.style/',
+        fullDescription: 'Responsable del mantenimiento del sitio web Hardwear Style desarrollado en WordPress durante el año 2024. Las tareas incluyeron actualizaciones de contenido, optimización de rendimiento, resolución de problemas técnicos, actualizaciones de seguridad y plugins, asegurando el funcionamiento óptimo y la disponibilidad constante del sitio. El mantenimiento fue posteriormente cedido al cliente.'
+    },
 ]
 
 export const serviceData = [
